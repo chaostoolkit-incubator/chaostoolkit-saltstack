@@ -1,0 +1,7 @@
+include README.md
+include requirements.txt
+include requirements-dev.txt
+include LICENSE
+include CHANGELOG.md
+include pytest.ini
+include chaossaltstack/machine/scripts/*
