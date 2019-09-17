@@ -2,7 +2,9 @@ language: python
 python:
 - 3.5
 - 3.6
+
 install:
+- pip install -q -U pip
 - pip install -r requirements.txt -r requirements-dev.txt
 env:
   global:
