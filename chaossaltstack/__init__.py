@@ -7,8 +7,7 @@ from typing import Any, Dict, List
 from chaoslib.discovery.discover import discover_actions, discover_probes, \
     initialize_discovery_result
 from chaoslib.exceptions import FailedActivity
-from chaoslib.types import Configuration, Discovery, DiscoveredActivities, \
-    Secrets
+from chaoslib.types import Discovery, DiscoveredActivities, Secrets
 from logzero import logger
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
