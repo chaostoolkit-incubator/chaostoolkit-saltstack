@@ -24,7 +24,7 @@ To be used from your experiment, this package must be installed in the Python
 environment where [chaostoolkit][] already lives.
 
 ```
-$ pip install -U chaostoolkit-salt
+$ pip install -U chaostoolkit-saltstack
 ```
 
 
@@ -39,7 +39,7 @@ experiment file:
     "name": "burn_cpu",
     "provider": {
         "type": "python",
-        "module": "saltstack.machines.actions",
+        "module": "chaossaltstack.machines.actions",
         "func": "burn_cpu",
         "secrets": ["saltstack"],
         "arguments": {
@@ -178,7 +178,7 @@ Here is a full example:
         "name": "check_minions_online",
         "provider": {
           "type": "python",
-          "module": "saltstack.machine.probes",
+          "module": "chaossaltstack.machine.probes",
           "func": "is_minion_online",
           "arguments": {
               "instance_ids": [ "PABCDEFGS0016","PABCDEFGS0666" ]
@@ -194,6 +194,7 @@ Here is a full example:
         "name": "stress_cpu",
         "provider": {
             "type": "python",
+          "module": "chaossaltstack.machine.probes",
             "module": "saltstack.machine.actions",
             "func": "stress_cpu",
             "arguments": {
