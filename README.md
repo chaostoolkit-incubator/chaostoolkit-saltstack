@@ -1,6 +1,6 @@
 # Chaos Toolkit Extension for SaltStack
 
-[![Build Status](https://travis-ci.org/chaostoolkit-incubator/chaostoolkit-saltstack.svg?branch=master)](https://travis-ci.org/chaostoolkit-incubator/chaostoolkit-saltstack)
+[![Build Status](https://travis-ci.com/chaostoolkit-incubator/chaostoolkit-saltstack.svg?branch=master)](https://travis-ci.com/chaostoolkit-incubator/chaostoolkit-saltstack)
 [![Python versions](https://img.shields.io/pypi/pyversions/chaostoolkit-saltstack.svg)](https://www.python.org/)
 
 This project is a collection of [actions][] and [probes][], gathered as an
