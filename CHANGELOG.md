@@ -3,6 +3,16 @@
 ## [Unreleased][]
 [Unreleased]: https://github.com/chaostoolkit-incubator/chaostoolkit-saltstack/compare/0.1.0...HEAD
 
+### Changed
+
+- Refactory: abstract core workflow into one common function to reduce duplicates
+
+### Added
+
+- Add experiment action of kill processes by name
+- Add experiment action of kill process by PID
+- Add experiment probe to check process PID by name
+
 ## [0.1.0][]
 
 [0.1.0]: https://github.com/chaostoolkit-incubator/chaostoolkit-saltstack/tree/0.1.0
