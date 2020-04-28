@@ -1,7 +1,18 @@
 # Changelog
 
-## [Unreleased][]
-[Unreleased]: https://github.com/chaostoolkit-incubator/chaostoolkit-saltstack/compare/0.1.0...HEAD
+## [0.1.1][]
+
+### Changed
+
+- Bugfix: kill process now passes correct parameter
+- Refactory: abstract core workflow into one common function to reduce duplicates
+
+### Added
+
+- Network experiments now accepts device name to adapt different os
+- Add experiment action of kill processes by name
+- Add experiment action of kill process by PID
+- Add experiment probe to check process PID by name
 
 ### Changed
 

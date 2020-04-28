@@ -506,7 +506,8 @@ def test_network_latency_on_linux_two_error_in_script(init, open):
 
     # do
     # with pytest.raises(FailedActivity, match=r"One of experiments are failed among.*"):
-    response = network_latency(instance_ids=['CLIENT1', 'CLIENT2'], execution_duration="1")
+    response = network_latency(instance_ids=['CLIENT1', 'CLIENT2'], execution_duration="1", device="ens192")
+
     # assert
     open.assert_called_with(AnyStringWith("network_advanced.sh"))
     client.get_grains_get.assert_called_with(['CLIENT1', 'CLIENT2'], 'kernel')

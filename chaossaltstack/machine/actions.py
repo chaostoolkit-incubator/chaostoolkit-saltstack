@@ -136,6 +136,7 @@ def burn_io(instance_ids: List[str] = None,
 def network_advanced(instance_ids: List[str] = None,
                      execution_duration: str = "60",
                      command: str = "",
+                     device: str = "eth0",
                      configuration: Configuration = None,
                      secrets: Secrets = None) -> SaltStackResponse:
     """
@@ -164,6 +165,7 @@ def network_advanced(instance_ids: List[str] = None,
     param = dict()
     param["duration"] = execution_duration
     param["param"] = command
+    param["device"] = device
 
     return __default_salt_experiment__(instance_ids=instance_ids,
                                        execution_duration=execution_duration,
@@ -177,6 +179,7 @@ def network_advanced(instance_ids: List[str] = None,
 def network_loss(instance_ids: List[str] = None,
                  execution_duration: str = "60",
                  loss_ratio: str = "5%",
+                 device: str = "eth0",
                  configuration: Configuration = None,
                  secrets: Secrets = None) -> SaltStackResponse:
     """
@@ -205,7 +208,8 @@ def network_loss(instance_ids: List[str] = None,
     param = dict()
     param["duration"] = execution_duration
     param["param"] = "loss " + loss_ratio
-
+    param["device"] = device
+    
     return __default_salt_experiment__(instance_ids=instance_ids,
                                        execution_duration=execution_duration,
                                        param=param,
@@ -218,6 +222,7 @@ def network_loss(instance_ids: List[str] = None,
 def network_corruption(instance_ids: List[str] = None,
                        execution_duration: str = "60",
                        corruption_ratio: str = "5%",
+                       device: str = "eth0",
                        configuration: Configuration = None,
                        secrets: Secrets = None) -> SaltStackResponse:
     """
@@ -246,6 +251,8 @@ def network_corruption(instance_ids: List[str] = None,
     param = dict()
     param["duration"] = execution_duration
     param["param"] = "corrupt " + corruption_ratio
+    param["device"] = device
+
 
     return __default_salt_experiment__(instance_ids=instance_ids,
                                        execution_duration=execution_duration,
@@ -261,6 +268,7 @@ def network_latency(instance_ids: List[str] = None,
                     delay: str = "1000ms",
                     variance: str = "500ms",
                     ratio: str = "",
+                    device: str = "eth0",
                     configuration: Configuration = None,
                     secrets: Secrets = None) -> SaltStackResponse:
     """
@@ -292,6 +300,7 @@ def network_latency(instance_ids: List[str] = None,
     param = dict()
     param["duration"] = execution_duration
     param["param"] = "delay " + delay + " " + variance + " " + ratio
+    param["device"] = device
 
     return __default_salt_experiment__(instance_ids=instance_ids,
                                        execution_duration=execution_duration,
@@ -337,7 +346,7 @@ def killall_processes(instance_ids: List[str] = None,
 
     param = dict()
     param["duration"] = execution_duration
-    param["param"] = process_name
+    param["process_name"] = process_name
     param["signal"] = signal
 
     return __default_salt_experiment__(instance_ids=instance_ids,
@@ -385,7 +394,7 @@ def kill_process(instance_ids: List[str] = None,
 
     param = dict()
     param["duration"] = execution_duration
-    param["param"] = process
+    param["process_name"] = process
     param["signal"] = signal
 
     return __default_salt_experiment__(instance_ids=instance_ids,
